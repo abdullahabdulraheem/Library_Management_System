@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -19,18 +18,16 @@ namespace Library_Management_System.Migrations
                 name: "Books",
                 columns: table => new
                 {
-                    BookID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Title = table.Column<string>(type: "longtext", nullable: false)
+                    BookID = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    Title = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Author = table.Column<string>(type: "longtext", nullable: false)
+                    Author = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Genre = table.Column<string>(type: "longtext", nullable: false)
+                    Genre = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    ISBN = table.Column<string>(type: "longtext", nullable: false)
+                    ISBN = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Copies = table.Column<int>(type: "int", nullable: false),
-                    Availability = table.Column<bool>(type: "tinyint(1)", nullable: false)
+                    Copies = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -42,8 +39,7 @@ namespace Library_Management_System.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    UserID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    UserID = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
                     Username = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Password = table.Column<string>(type: "longtext", nullable: false)
@@ -64,13 +60,12 @@ namespace Library_Management_System.Migrations
                 name: "Borrowings",
                 columns: table => new
                 {
-                    BorrowingID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    BookID = table.Column<int>(type: "int", nullable: false),
-                    UserID = table.Column<int>(type: "int", nullable: false),
+                    BorrowingID = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
                     BorrowDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     DueDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    Returned = table.Column<bool>(type: "tinyint(1)", nullable: false)
+                    Returned = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    BookID = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    UserID = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci")
                 },
                 constraints: table =>
                 {
@@ -94,9 +89,8 @@ namespace Library_Management_System.Migrations
                 name: "Librarians",
                 columns: table => new
                 {
-                    LibrarianID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    UserID = table.Column<int>(type: "int", nullable: false)
+                    LibrarianID = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    UserID = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci")
                 },
                 constraints: table =>
                 {

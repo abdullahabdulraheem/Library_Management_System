@@ -1,7 +1,7 @@
-namespace Library_Management_System.Data;
+namespace Library_Management_System.Models;
     public class User
     {
-        public int UserID { get; set; }
+        public Guid UserID { get; set; }
         public string Username { get; set; } = default!;
         public string Password { get; set; } = default!;
         public string Name { get; set; } = default!;

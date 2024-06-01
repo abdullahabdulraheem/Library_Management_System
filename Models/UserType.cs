@@ -1,4 +1,4 @@
-namespace Library_Management_System.Data;
+namespace Library_Management_System.Models;
 
 public enum UserType
 {

@@ -1,10 +1,8 @@
-namespace Library_Management_System.Data;
+namespace Library_Management_System.Models;
 
     public class Borrowing
     {
-        public int BorrowingID { get; set; }
-        public int BookID { get; set; }
-        public int UserID { get; set; }
+        public Guid BorrowingID { get; set; }
         public DateTime BorrowDate { get; set; }
         public DateTime DueDate { get; set; }
         public bool Returned { get; set; }

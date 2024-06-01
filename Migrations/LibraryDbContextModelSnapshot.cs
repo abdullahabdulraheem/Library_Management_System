@@ -22,34 +22,25 @@ namespace Library_Management_System.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("Library_Management_System.Data.Book", b =>
+            modelBuilder.Entity("Library_Management_System.Models.Book", b =>
                 {
-                    b.Property<int>("BookID")
+                    b.Property<Guid>("BookID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("BookID"));
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Author")
-                        .IsRequired()
                         .HasColumnType("longtext");
-
-                    b.Property<bool>("Availability")
-                        .HasColumnType("tinyint(1)");
 
                     b.Property<int>("Copies")
                         .HasColumnType("int");
 
                     b.Property<string>("Genre")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("ISBN")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("BookID");
@@ -57,16 +48,14 @@ namespace Library_Management_System.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("Library_Management_System.Data.Borrowing", b =>
+            modelBuilder.Entity("Library_Management_System.Models.Borrowing", b =>
                 {
-                    b.Property<int>("BorrowingID")
+                    b.Property<Guid>("BorrowingID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("BorrowingID"));
-
-                    b.Property<int>("BookID")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BookID")
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("BorrowDate")
                         .HasColumnType("datetime(6)");
@@ -77,8 +66,8 @@ namespace Library_Management_System.Migrations
                     b.Property<bool>("Returned")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("BorrowingID");
 
@@ -89,16 +78,14 @@ namespace Library_Management_System.Migrations
                     b.ToTable("Borrowings");
                 });
 
-            modelBuilder.Entity("Library_Management_System.Data.Librarian", b =>
+            modelBuilder.Entity("Library_Management_System.Models.Librarian", b =>
                 {
-                    b.Property<int>("LibrarianID")
+                    b.Property<Guid>("LibrarianID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("LibrarianID"));
-
-                    b.Property<int>("UserID")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("LibrarianID");
 
@@ -107,13 +94,11 @@ namespace Library_Management_System.Migrations
                     b.ToTable("Librarians");
                 });
 
-            modelBuilder.Entity("Library_Management_System.Data.User", b =>
+            modelBuilder.Entity("Library_Management_System.Models.User", b =>
                 {
-                    b.Property<int>("UserID")
+                    b.Property<Guid>("UserID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("UserID"));
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -139,15 +124,15 @@ namespace Library_Management_System.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Library_Management_System.Data.Borrowing", b =>
+            modelBuilder.Entity("Library_Management_System.Models.Borrowing", b =>
                 {
-                    b.HasOne("Library_Management_System.Data.Book", "Book")
+                    b.HasOne("Library_Management_System.Models.Book", "Book")
                         .WithMany()
                         .HasForeignKey("BookID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Library_Management_System.Data.User", "User")
+                    b.HasOne("Library_Management_System.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -158,9 +143,9 @@ namespace Library_Management_System.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Library_Management_System.Data.Librarian", b =>
+            modelBuilder.Entity("Library_Management_System.Models.Librarian", b =>
                 {
-                    b.HasOne("Library_Management_System.Data.User", "User")
+                    b.HasOne("Library_Management_System.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -34,7 +34,7 @@
                 <td>@books.ISBN</td>
                 <td>@books.Copies</td>
                 <td>@books.Availability</td>
-                <td><a class="btn btn-primary">Edit</a></td>
+                <td><a class="btn btn-primary" asp-action="UserBookDetails" asp-controller="Library" asp-route-id="@books.BookID">ViewBook</a></td>
             </tr>
         }
     </tbody>

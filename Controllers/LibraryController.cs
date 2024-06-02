@@ -67,6 +67,12 @@ namespace Library_Management_System.Controllers
             return RedirectToAction("LibrarianBookCatalog", "Library");
         }
 
+        public async Task<IActionResult> UserBookDetails(Guid id)
+        {
+            var books = await dbContext.Books.FindAsync(id);
+            return View(books);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

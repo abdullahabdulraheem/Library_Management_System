@@ -12,18 +12,13 @@ using Library_Management_System.Models;
 namespace Library_Management_System.Controllers
 {
     // [Route("[controller]")]
-    public class LibraryController : Controller
+    public class LibrarianController : Controller
     {
         private readonly LibraryDbContext dbContext;
-        public LibraryController(LibraryDbContext dbContext)
+        public LibrarianController(LibraryDbContext dbContext)
         {
             this.dbContext = dbContext;
             
-        }
-
-        public IActionResult UserHome()
-        {
-            return View();
         }
 
         public IActionResult LibrarianHome()
@@ -31,12 +26,6 @@ namespace Library_Management_System.Controllers
             return View();
         }
 
-        [HttpGet]
-        public async Task<IActionResult> UserBookCatalog()
-        {
-            var books = await dbContext.Books.ToListAsync();
-            return View(books);
-        }
 
         [HttpGet]
         public async Task<IActionResult> LibrarianBookCatalog()
@@ -65,12 +54,6 @@ namespace Library_Management_System.Controllers
             await dbContext.Books.AddAsync(book);
             await dbContext.SaveChangesAsync();
             return RedirectToAction("LibrarianBookCatalog", "Library");
-        }
-
-        public async Task<IActionResult> UserBookDetails(Guid id)
-        {
-            var books = await dbContext.Books.FindAsync(id);
-            return View(books);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

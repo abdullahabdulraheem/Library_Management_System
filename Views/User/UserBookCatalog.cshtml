@@ -6,11 +6,11 @@
 @model List<Library_Management_System.Models.Book>
 
 <div class="navbar-brand">
-    <a asp-action="UserBookCatalog" asp-controller="Library">Catalog</a>
+    <a asp-action="UserBookCatalog" asp-controller="User">Catalog</a>
     <a href="#">History</a>
     <a href="#">Requests</a>
     <a href="#">Sign Out</a>
-    <a asp-action="UserHome" asp-controller="Library">Home</a>
+    <a asp-action="UserHome" asp-controller="User">Home</a>
 </div>
 
 <h1>Book Catalog</h1>
@@ -34,7 +34,7 @@
                 <td>@books.ISBN</td>
                 <td>@books.Copies</td>
                 <td>@books.Availability</td>
-                <td><a class="btn btn-primary" asp-action="UserBookDetails" asp-controller="Library" asp-route-id="@books.BookID">ViewBook</a></td>
+                <td><a class="btn btn-primary" asp-action="UserBookDetails" asp-controller="User" asp-route-id="@books.BookID">ViewBook</a></td>
             </tr>
         }
     </tbody>

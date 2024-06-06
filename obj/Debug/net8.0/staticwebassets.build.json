@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Lfc+MR0rWivmL1TwzjGMBhwWKYuspqmthd54aIFo+n8=",
+  "Hash": "gLMMlRGHQc66Nt3rgxlJS56IHaVoEohcKMm4lZpCsDE=",
   "Source": "Library_Management_System",
   "BasePath": "_content/Library_Management_System",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Library_Management_System.styles.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Library_Management_System.styles.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Library_Management_System",
       "RelativePath": "Library_Management_System.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Library_Management_System.styles.css"
+      "OriginalItemSpec": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Library_Management_System.styles.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Library_Management_System.bundle.scp.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Library_Management_System.bundle.scp.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Library_Management_System",
       "RelativePath": "Library_Management_System.bundle.scp.css",
       "AssetKind": "All",
@@ -52,10 +52,10 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Library_Management_System.bundle.scp.css"
+      "OriginalItemSpec": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Library_Management_System.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\css\\site.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\css\\site.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -74,7 +74,7 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\favicon.ico",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\favicon.ico",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -93,7 +93,7 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\js\\site.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\js\\site.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -112,7 +112,7 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -131,7 +131,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -150,7 +150,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -169,7 +169,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -188,7 +188,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -207,7 +207,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -226,7 +226,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -245,7 +245,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -264,7 +264,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -283,7 +283,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -302,7 +302,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -321,7 +321,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -340,7 +340,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -359,7 +359,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -378,7 +378,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -397,7 +397,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -416,7 +416,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -435,7 +435,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -454,7 +454,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -473,7 +473,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -492,7 +492,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -511,7 +511,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -530,7 +530,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -549,7 +549,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -568,7 +568,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -587,7 +587,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -606,7 +606,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -625,7 +625,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -644,7 +644,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -663,7 +663,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -682,7 +682,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -701,7 +701,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -720,7 +720,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -739,7 +739,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -758,7 +758,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -777,7 +777,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -796,7 +796,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -815,7 +815,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -834,7 +834,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -853,7 +853,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -872,7 +872,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -891,7 +891,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -910,7 +910,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -929,7 +929,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -948,7 +948,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -967,7 +967,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -986,7 +986,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1005,7 +1005,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1024,7 +1024,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1043,7 +1043,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1062,7 +1062,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1081,7 +1081,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1100,7 +1100,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1119,7 +1119,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1138,7 +1138,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1157,7 +1157,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",
@@ -1176,7 +1176,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "c:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Library_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\wwwroot\\",

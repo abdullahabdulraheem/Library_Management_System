@@ -6,5 +6,4 @@ namespace Library_Management_System.Models;
         public string Password { get; set; } = default!;
         public string Name { get; set; } = default!;
         public string Email { get; set; } = default!;
-        public UserType UserType { get; set; } = default!;
     }

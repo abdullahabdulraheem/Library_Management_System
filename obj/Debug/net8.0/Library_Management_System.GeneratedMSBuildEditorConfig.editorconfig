@@ -18,54 +18,54 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\MyCSharpProjects\Library_Management_System
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Home/Index.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Home/Privacy.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Librarian/AddBook.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Librarian/AddBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyaWFuXEFkZEJvb2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Librarian/LibrarianBookCatalog.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Librarian/LibrarianBookCatalog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyaWFuXExpYnJhcmlhbkJvb2tDYXRhbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Librarian/LibrarianHome.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Librarian/LibrarianHome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyaWFuXExpYnJhcmlhbkhvbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Shared/Error.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/User/UserBookCatalog.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/User/UserBookCatalog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyQm9va0NhdGFsb2cuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/User/UserBookDetails.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/User/UserBookDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyQm9va0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/User/UserHome.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/User/UserHome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VySG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/_ViewImports.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/_ViewStart.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Shared/_Layout.cshtml]
+[C:/Users/user/Desktop/MyCSharpProjects/Library_Management_System/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4tczlcosvr

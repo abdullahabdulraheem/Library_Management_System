@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Hw1sQX33FZ+ecofPUsNBXr7dtlYAP0RjKzio3+ydTQYfkPVhJ5p3rFa9LHRQCxnZn5Qq7VMhPAKCrFbnpr3APg==",
+  "dgSpecHash": "MrZvVnqWtaodkwdhLqn3Ofmq3HoX6xmAevoDplhQTig5mMIechi/s8fHZBZH4QL5BnKXHb4OfJM7CeA6GhKfAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\MyCSharpProjects\\Library_Management_System\\Library_Management_System.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\aspnetcorehero.toastnotification\\1.1.0\\aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -44,6 +45,7 @@
     "C:\\Users\\user\\.nuget\\packages\\mysql.data\\8.4.0\\mysql.data.8.4.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mysql.entityframeworkcore\\8.0.2\\mysql.entityframeworkcore.8.0.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.2\\pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",

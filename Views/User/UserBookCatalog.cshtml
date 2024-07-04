@@ -3,7 +3,7 @@
 }
 
 <h1>@ViewData["Title"]</h1> *@
-@model List<Library_Management_System.Models.Book>
+@model List<Library_Management_System.Data.Book>
 
 <div class="navbar-brand">
     <a asp-action="UserBookCatalog" asp-controller="User">Catalog</a>
@@ -34,7 +34,7 @@
                 <td>@books.ISBN</td>
                 <td>@books.Copies</td>
                 <td>@books.Availability</td>
-                <td><a class="btn btn-primary" asp-action="UserBookDetails" asp-controller="User" asp-route-id="@books.BookID">ViewBook</a></td>
+                <td><a class="btn btn-primary" asp-action="UserBookDetails" asp-controller="User" asp-route-id="@books.Id">ViewBook</a></td>
             </tr>
         }
     </tbody>

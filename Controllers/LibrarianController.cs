@@ -5,9 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Library_Management_System.context;
+using Library_Management_System.Context;
 using Microsoft.EntityFrameworkCore;
 using Library_Management_System.Models;
+using Library_Management_System.Data;
 
 namespace Library_Management_System.Controllers
 {
@@ -53,7 +54,7 @@ namespace Library_Management_System.Controllers
             };
             await dbContext.Books.AddAsync(book);
             await dbContext.SaveChangesAsync();
-            return RedirectToAction("LibrarianBookCatalog", "Library");
+            return RedirectToAction("LibrarianBookCatalog", "Librarian");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

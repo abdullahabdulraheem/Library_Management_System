@@ -1,6 +1,4 @@
-using Library_Management_System.Data;
-
-namespace Library_Management_System.Models;
+namespace Library_Management_System.Data;
 
     public class Book : BaseEntity
     {

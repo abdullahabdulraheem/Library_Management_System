@@ -1,5 +1,7 @@
-using Library_Management_System.context;
+using Library_Management_System.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using AspNetCoreHero.ToastNotification;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,32 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<LibraryDbContext>(
     OptionsBuilder => OptionsBuilder.UseMySql(builder.Configuration.GetConnectionString("LMSConnectionString"), new MySqlServerVersion("8.0"))
 );
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(opt => 
+{
+    opt.Password.RequiredLength = 7;
+    opt.Password.RequireDigit = false;
+    opt.Password.RequireUppercase = false;
+    opt.User.RequireUniqueEmail = true;
+})
+.AddRoles<IdentityRole>()
+.AddEntityFrameworkStores<LibraryDbContext>()
+.AddDefaultTokenProviders();
+
+builder.Services.AddNotyf(config =>
+{
+    config.DurationInSeconds = 5;
+    config.IsDismissable = true;
+    config.Position = NotyfPosition.TopLeft;
+});
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromDays(10);
+    options.LoginPath = "/Auth/Login";
+    options.SlidingExpiration = true;
+});
 
 var app = builder.Build();
 
@@ -26,10 +54,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();

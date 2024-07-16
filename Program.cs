@@ -2,6 +2,7 @@ using Library_Management_System.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AspNetCoreHero.ToastNotification;
+using AspNetCoreHero.ToastNotification.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,22 +21,24 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(opt =>
     opt.Password.RequireUppercase = false;
     opt.User.RequireUniqueEmail = true;
 })
-.AddRoles<IdentityRole>()
 .AddEntityFrameworkStores<LibraryDbContext>()
 .AddDefaultTokenProviders();
 
 builder.Services.AddNotyf(config =>
 {
-    config.DurationInSeconds = 5;
+    config.DurationInSeconds = 7;
     config.IsDismissable = true;
-    config.Position = NotyfPosition.TopLeft;
+    config.Position = NotyfPosition.TopRight;
 });
+
+builder.Services.AddControllersWithViews();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.HttpOnly = true;
-    options.ExpireTimeSpan = TimeSpan.FromDays(10);
+    options.ExpireTimeSpan = TimeSpan.FromDays(30);
     options.LoginPath = "/Auth/Login";
+    options.AccessDeniedPath = "/Auth/Login";
     options.SlidingExpiration = true;
 });
 
@@ -45,7 +48,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -57,9 +59,10 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseNotyf();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
 
 app.Run();

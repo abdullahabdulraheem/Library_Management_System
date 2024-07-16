@@ -1,0 +1,33 @@
+@model List<Library_Management_System.Data.Borrowing>
+
+@if(Model is not null)
+{
+    <body>
+        <div class="content">
+            <h1>Request Page</h1>
+            <div class="request-container">
+                <h2>Pending Requests...</h2>
+                <!-- Requests will be generated here -->
+                <!-- Example request -->
+                
+                    @foreach (var borrowing in Model)
+                    {
+                    <div class="request">
+                        <h2>@borrowing.LibrarianMessage</h2>
+                        <p>Requested by: @borrowing.User.UserName/p>
+                        <p>Requested on: @borrowing.BorrowDate</p>
+                        <button asp-asp-controller="Librarian" asp-action="Assign" class="assign-btn">Assign</button>
+                        <button asp-controller="Librarian" asp-action="Dismiss" class="cancel-btn">Cancel</button>
+                    </div>  
+                    }
+                    
+            </div>
+        </div>
+    </body>    
+}
+
+else{
+    <h1>Nothing to be displayed yet!</h1>
+}
+
+</html>

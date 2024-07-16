@@ -41,14 +41,16 @@ public class AuthController(
 
             var result = await _signInManager.PasswordSignInAsync(user!.UserName!, model.Password, false, lockoutOnFailure: false);
 
+            // var result = await _signInManager.PasswordSignInAsync(user!.UserName!, model.Password, false, lockoutOnFailure: false);
+
             if(result.Succeeded)
             {
-                var userDetails = await Helper.GetCurrentUserIdAsync(_httpContextAccessor, _userManager);
-
                 var redirectResult = RedirectToAction("Index", "Home");
 
                 _notyfService.Success("You're Logged in successfully");
+                return redirectResult;
             }
+            
             ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
             _notyfService.Error("Invald Login Attempt");
             return View(model);

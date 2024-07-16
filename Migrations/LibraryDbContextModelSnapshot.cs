@@ -36,6 +36,9 @@ namespace Library_Management_System.Migrations
                     b.Property<bool>("Availability")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<DateTime>("BorrowedOn")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<int>("Copies")
                         .HasColumnType("int");
 
@@ -46,10 +49,6 @@ namespace Library_Management_System.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("ISBN")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("RequestMessage")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Title")
@@ -77,17 +76,16 @@ namespace Library_Management_System.Migrations
                     b.Property<DateTime>("BorrowDate")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<DateTime>("BorrowedOn")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DueDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("LibrarianRequestMessage")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("RequestMessage")
+                    b.Property<string>("LibrarianMessage")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -104,7 +102,7 @@ namespace Library_Management_System.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("UserRequestMessage")
+                    b.Property<string>("UserMessage")
                         .IsRequired()
                         .HasColumnType("longtext");
 

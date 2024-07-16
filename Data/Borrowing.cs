@@ -9,7 +9,8 @@ namespace Library_Management_System.Data;
         public DateTime DueDate { get; set; }
         public Book Book { get; set; } = default!;
         public IdentityUser User { get; set;} = default!;
-        public string RequestMessage { get; set; } = default!;
+        public string LibrarianMessage { get; set; } = default!;
+        public string UserMessage { get; set; } = default!;
         public Status Status { get; set; }
         public bool Returned { get; set; }
     }

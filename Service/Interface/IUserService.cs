@@ -12,5 +12,6 @@ namespace Library_Management_System.Service.Interface
         Task<BaseResponse<bool>> UserChangePassword(UserChangePasswordRequestDto request);
         Task<BaseResponse<List<UserDto>>> GetUsers();
         Task<BaseResponse<UserDto>> GetUser(string Id);
+        Task<BaseResponse<bool>> SignOutAsync();
     }
 }

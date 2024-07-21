@@ -3,13 +3,10 @@ using Library_Management_System.Data;
 using Library_Management_System.Data.Context;
 using Library_Management_System.Data.Entities;
 using Library_Management_System.Dto;
-using Library_Management_System.Dto.Book;
 using Library_Management_System.Dto.User;
 using Library_Management_System.Service.Interface;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Routing.Tree;
 using Microsoft.EntityFrameworkCore;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Library_Management_System.Service
 {
@@ -94,7 +91,17 @@ namespace Library_Management_System.Service
             }
         }
 
+        public Task<BaseResponse<bool>> SignOut()
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<BaseResponse<bool>> UserChangePassword(UserChangePasswordRequestDto request)
+        {
+            throw new NotImplementedException();
+        } 
+        
+        public Task<BaseResponse<bool>> UserResetPassword(UserResetPasswordRequestDto request)
         {
             throw new NotImplementedException();
         }
@@ -110,7 +117,7 @@ namespace Library_Management_System.Service
 
                 if (result.Succeeded)
                 {
-                   
+
                     _notyfService.Success("You're Logged in successfully");
                     return new BaseResponse<bool> { IsSuccessful = true, Message = "You're Logged in successfully" };
                 }
@@ -157,7 +164,7 @@ namespace Library_Management_System.Service
 
                 var addRole = await _userManager.AddToRoleAsync(user, "User");
 
-                if(!addRole.Succeeded)
+                if (!addRole.Succeeded)
                 {
                     _notyfService.Error("Add user role failed");
                     return new BaseResponse<bool> { IsSuccessful = false, Message = "User creation failed" };
@@ -177,9 +184,10 @@ namespace Library_Management_System.Service
             }
         }
 
-        public Task<BaseResponse<bool>> UserResetPassword(UserResetPasswordRequestDto request)
+        public async Task<BaseResponse<bool>> SignOutAsync()
         {
-            throw new NotImplementedException();
+            await _signInManager.SignOutAsync();
+            return new BaseResponse<bool> { IsSuccessful = true, Message = "Sign out successfully." };
         }
     }
 }

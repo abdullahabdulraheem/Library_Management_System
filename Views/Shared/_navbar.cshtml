@@ -38,9 +38,11 @@
                             <i class="mdi mdi-cached me-2 text-success"></i> Activity Log
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
-                            <i class="mdi mdi-logout me-2 text-primary"></i> Signout
-                        </a>
+                        <form asp-controller="Auth" asp-action="Logout">
+                            <button class="dropdown-item" type="submit">
+                                <i class="mdi mdi-logout me-2 text-primary"></i> Signout
+                            </button>
+                        </form>
                     </div>
                 }
 

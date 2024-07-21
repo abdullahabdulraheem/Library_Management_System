@@ -1,20 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using AspNetCoreHero.ToastNotification.Abstractions;
-using AspNetCoreHero.ToastNotification.Notyf;
-using Library_Management_System.Data.Context;
 using Library_Management_System.Dto.User;
-using Library_Management_System.Models;
+using Library_Management_System.Service;
 using Library_Management_System.Service.Interface;
-using Library_Management_System.Utility;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Razor;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace Library_Management_System.Controllers;
 public class AuthController : Controller
@@ -26,16 +13,17 @@ public class AuthController : Controller
         _userService = userService;
     }
 
-    
-    public IActionResult Login(string? returnUrl = null)
+    [HttpGet]
+    public async Task<IActionResult> Login(string? returnUrl = null)
     {
         ViewData["ReturnUrl"] = returnUrl;
         return View();
     }
 
-    [HttpPost("login")]
-    public async Task<IActionResult> Login(UserLoginRequestDto request)
+    [HttpPost]
+    public async Task<IActionResult> Login(UserLoginRequestDto request, string returnUrl = null)
     {
+        ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
             var result = await _userService.UserLogin(request);
@@ -74,5 +62,30 @@ public class AuthController : Controller
         }
 
         return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Logout()
+    {
+        var result = await _userService.SignOutAsync();
+
+        if (result.IsSuccessful)
+            return RedirectToAction("Login","Auth", new { returnUrl = ""});
+
+        return View();
+    }
+
+
+    [HttpGet("users")]
+    public async Task<IActionResult> Users()
+    {
+        var result = await _userService.GetUsers();
+
+        if (result.IsSuccessful)
+        {
+            return View(result.Data);
+        }
+
+        return View(result.Data);
     }
 }

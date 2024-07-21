@@ -1,8 +1,11 @@
-using Library_Management_System.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AspNetCoreHero.ToastNotification;
 using AspNetCoreHero.ToastNotification.Extensions;
+using Library_Management_System.Data.Context;
+using Library_Management_System.Service.Interface;
+using Library_Management_System.Service;
+using Library_Management_System.Data.Entities;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,11 +13,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<LibraryDbContext>(
-    OptionsBuilder => OptionsBuilder.UseMySql(builder.Configuration.GetConnectionString("LMSConnectionString"), new MySqlServerVersion("8.0"))
-);
+//builder.Services.AddDbContext<LibraryDbContext>(
+//    OptionsBuilder => OptionsBuilder.UseMySql(builder.Configuration.GetConnectionString("LMSConnectionString"), new MySqlServerVersion("8.0"))
+//);
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(opt => 
+var connectionString = builder.Configuration.GetConnectionString("LMSConnectionString") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+builder.Services.AddDbContext<LibraryDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddIdentity<User, IdentityRole>(opt => 
 {
     opt.Password.RequiredLength = 7;
     opt.Password.RequireDigit = false;
@@ -31,7 +39,9 @@ builder.Services.AddNotyf(config =>
     config.Position = NotyfPosition.TopRight;
 });
 
-builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IBookService,BookService>();
+builder.Services.AddScoped<IUserService,UserService>();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {

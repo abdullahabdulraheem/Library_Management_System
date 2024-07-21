@@ -1,0 +1,62 @@
+﻿@using Library_Management_System.Dto.Book;
+@model CreateBookRequestDto;
+
+@{
+    ViewData["Title"] = "Book";
+    ViewData["SubTitle"] = "Create Book";
+}
+
+
+<div class="page-header">
+    <h3 class="page-title"> Book</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["SubTitle"]</li>
+        </ol>
+    </nav>
+</div>
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Basic form elements</h4>
+            <p class="card-description"> Basic form elements </p>
+            <form class="forms-sample" asp-action="CreateBook">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="Title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" class="form-control" name="Author" placeholder="Author">
+                </div>
+               
+                <div class="form-group">
+                    <label>Copies</label>
+                    <input type="number" class="form-control" name="Copies" placeholder="Copies">
+                </div>
+
+                <div class="form-group">
+                    <label>Genre</label>
+                    <input type="text" class="form-control" name="Genre" placeholder="Genre">
+                </div>
+
+                <div class="form-group">
+                    <label>ISBN</label>
+                    <input type="text" class="form-control" name="ISBN" placeholder="ISBN">
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" checked="" name="Availability"> Checked <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

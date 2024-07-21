@@ -1,31 +1,91 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Library_Management_System</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Library_Management_System.styles.css" asp-append-version="true" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Purple Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="~/assets/vendors/font-awesome/css/font-awesome.min.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="~/assets/vendors/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" />
 </head>
 <body>
-    <header>
-        <partial name="_Navigation"/>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Library_Management_System - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <div class="container-scroller">
+        <div class="row p-0 m-0 proBanner" id="proBanner">
+            <div class="col-md-12 p-0 m-0">
+                <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
+                    <div class="ps-lg-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
+                            <a href="https://www.bootstrapdash.com/product/purple-bootstrap-admin-template/" target="_blank" class="btn me-2 buy-now-btn border-0">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="https://www.bootstrapdash.com/product/purple-bootstrap-admin-template/"><i class="mdi mdi-home me-3 text-white"></i></a>
+                        <button id="bannerClose" class="btn border-0 p-0">
+                            <i class="mdi mdi-close text-white mr-0"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- partial:partials/_navbar.html -->
+        <partial name="_navbar" />
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <partial name="_sidebar"></partial>
+            <!-- partial -->
+            <div class="main-panel">
+
+                <div class="content-wrapper">
+                   
+                    @RenderBody()
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <partial name="_footer"></partial>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/assets/vendors/chart.js/chart.umd.js"></script>
+    <script src="~/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/assets/js/off-canvas.js"></script>
+    <script src="~/assets/js/misc.js"></script>
+    <script src="~/assets/js/settings.js"></script>
+    <script src="~/assets/js/todolist.js"></script>
+    <script src="~/assets/js/jquery.cookie.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="~/assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await Component.InvokeAsync("Notyf")
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>

@@ -13,5 +13,5 @@ public class Borrowing : BaseEntity
     public Status Status { get; set; }
     public bool Returned { get; set; }
 
-    public ICollection<LibarianMessage> LibarianMessages { get; set; } = new HashSet<LibarianMessage>();
+    public ICollection<Message> LibarianMessages { get; set; } = new HashSet<Message>();
 }

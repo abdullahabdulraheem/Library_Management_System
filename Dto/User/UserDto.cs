@@ -41,4 +41,16 @@ namespace Library_Management_System.Dto.User
         public string OldPassword { get; set; }
         public string NewPassword { get; set; }
     }
+
+    // public class BorrowRequestDto
+    // {
+    //     public required string UserId { get; set; }
+    //     public Guid BookId { get; set; } = default!;
+    //     public DateTime BorrowDate { get; set; }
+    //     public DateTime DueDate { get; set; }
+    //     public Book Book { get; set; }
+    //     public User User { get; set; }
+    //     public Status Status { get; set; }
+    //     public bool Returned { get; set; }
+    // }
 }

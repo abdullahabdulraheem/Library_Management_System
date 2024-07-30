@@ -10,7 +10,7 @@ namespace Library_Management_System.Data.Entities
         public UserType UserType { get; set; }
 
 
-        public ICollection<LibarianMessage> ReceivedMessages { get; set; } = new HashSet<LibarianMessage>();
-        public ICollection<LibarianMessage> SentMessages { get; set; } = new HashSet<LibarianMessage>();
+        public ICollection<Message> ReceivedMessages { get; set; } = new HashSet<Message>();
+        public ICollection<Message> SentMessages { get; set; } = new HashSet<Message>();
     }
 }

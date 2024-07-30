@@ -101,5 +101,18 @@ namespace Library_Management_System.Controllers
 
             return RedirectToAction("Books");
         }
+
+        public async Task<IActionResult> BorrowBookRequest(Guid id)
+        {
+            var result = await _bookService.BorrowBookRequest(id);
+
+            if(result.IsSuccessful)
+            {
+                return RedirectToAction("Books");
+            }
+
+            return RedirectToAction("Books");
+        }
+        
     }
 }

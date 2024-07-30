@@ -1,10 +1,15 @@
-﻿using AspNetCoreHero.ToastNotification.Abstractions;
+﻿using AspNetCoreHero.ToastNotification;
+using AspNetCoreHero.ToastNotification.Abstractions;
 using Library_Management_System.Data.Context;
 using Library_Management_System.Data.Entities;
 using Library_Management_System.Dto;
 using Library_Management_System.Dto.Book;
 using Library_Management_System.Service.Interface;
+using Library_Management_System.Utility;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Library_Management_System.Service
 {
@@ -12,8 +17,11 @@ namespace Library_Management_System.Service
     {
         private readonly LibraryDbContext _dbContext;
         private readonly INotyfService _notyf;
+        private readonly UserManager<User> _userManager;
+        IHttpContextAccessor _httpContextAccessor;
 
-        public BookService(LibraryDbContext libraryDbContext , INotyfService notyf)
+
+        public BookService(LibraryDbContext libraryDbContext , INotyfService notyf, UserManager<User> userManager,IHttpContextAccessor httpContextAccessor)
         {
             _dbContext = libraryDbContext;
             _notyf = notyf;
@@ -54,7 +62,7 @@ namespace Library_Management_System.Service
         }
 
 
-        public async Task<BaseResponse<bool>> UpdateBook(Guid Id, UpdateBookRequestDto request)
+        public async Task<BaseResponse<bool>> UpdateBook(Guid Id, [FromForm]UpdateBookRequestDto request)
         {
 
             try
@@ -188,6 +196,60 @@ namespace Library_Management_System.Service
                 _notyf.Error("Delete Failed");
                 return new BaseResponse<bool> { IsSuccessful = true, Message = "Error : Delete Failed" };
             }
+        }
+
+        public async Task<BaseResponse<bool>> BorrowBookRequest(Guid BookId)
+        {
+            try
+            {
+                var book = await _dbContext.Books.Where(x => x.Id == BookId).FirstOrDefaultAsync();
+
+                var userIdAndName = await Helper.GetCurrentUserIdAsync(_httpContextAccessor, _userManager);
+
+                var user = await _dbContext.Users.Where(x => x.Id == userIdAndName.userId).FirstOrDefaultAsync();
+                
+                if(book is null)
+                {
+                    _notyf.Error("Book not found");
+                    return new BaseResponse<bool> {IsSuccessful = false, Message = "Error finding Book" };
+                }
+
+                var borrowing = new Borrowing()
+                {
+                    UserId = userIdAndName.userId,
+                    BookId = book.Id,
+                    Book = book,
+                    User = user!,
+                    Status = Data.Enum.Status.pending
+                };
+
+                await _dbContext.AddAsync(borrowing);
+
+                var message = new Message
+                {
+                    BorrowId = borrowing.Id,
+                    Borrowing = borrowing,
+                    LibrarianMessageContent = $"{user!.FirstName} requested to borrow a copy of {book.Title} by {book.Author}.",
+                    UserMessageContent = $"You requested to borrow a copy of {book.Title} by {book.Author}.",
+                };
+
+                await _dbContext.AddAsync(message);
+
+                if(await _dbContext.SaveChangesAsync() > 0)
+                {
+                    _notyf.Success("Request Submitted!");
+                    return new BaseResponse<bool> {IsSuccessful = true, Message = "Request Submitted"};
+                }
+
+                _notyf.Error("Unable to submit request", 8);
+                return new BaseResponse<bool> {IsSuccessful = false, Message = "Request Failed"};
+            }
+            catch(Exception ex)
+            {
+                _notyf.Error("Unable to Submit Request");
+                return new BaseResponse<bool> {IsSuccessful = true, Message = "Request Failed"}; 
+            }
+            
         }
     }
 }

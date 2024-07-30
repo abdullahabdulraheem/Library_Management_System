@@ -13,7 +13,7 @@ public class LibraryDbContext : IdentityDbContext<User>
     }
 
     public DbSet<Book> Books { get; set; }
-    public DbSet<LibarianMessage> LibarianMessages { get; set; }
+    public DbSet<Message> LibarianMessages { get; set; }
     public DbSet<Borrowing> Borrowings { get; set; }
     public DbSet<User> Users { get; set; }
 
@@ -40,7 +40,7 @@ public class LibraryDbContext : IdentityDbContext<User>
            }
        );
 
-        modelBuilder.Entity<LibarianMessage>(entity =>
+        modelBuilder.Entity<Message>(entity =>
         {
             entity.HasKey(e => e.Id);
 

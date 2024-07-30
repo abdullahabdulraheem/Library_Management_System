@@ -2,6 +2,7 @@
 using AspNetCoreHero.ToastNotification.Abstractions;
 using Library_Management_System.Data.Context;
 using Library_Management_System.Data.Entities;
+using Library_Management_System.Data.Enum;
 using Library_Management_System.Dto;
 using Library_Management_System.Dto.Book;
 using Library_Management_System.Service.Interface;
@@ -21,7 +22,7 @@ namespace Library_Management_System.Service
         IHttpContextAccessor _httpContextAccessor;
 
 
-        public BookService(LibraryDbContext libraryDbContext , INotyfService notyf, UserManager<User> userManager,IHttpContextAccessor httpContextAccessor)
+        public BookService(LibraryDbContext libraryDbContext, INotyfService notyf, UserManager<User> userManager, IHttpContextAccessor httpContextAccessor)
         {
             _dbContext = libraryDbContext;
             _notyf = notyf;
@@ -62,7 +63,7 @@ namespace Library_Management_System.Service
         }
 
 
-        public async Task<BaseResponse<bool>> UpdateBook(Guid Id, [FromForm]UpdateBookRequestDto request)
+        public async Task<BaseResponse<bool>> UpdateBook(Guid Id, [FromForm] UpdateBookRequestDto request)
         {
 
             try
@@ -207,49 +208,119 @@ namespace Library_Management_System.Service
                 var userIdAndName = await Helper.GetCurrentUserIdAsync(_httpContextAccessor, _userManager);
 
                 var user = await _dbContext.Users.Where(x => x.Id == userIdAndName.userId).FirstOrDefaultAsync();
-                
-                if(book is null)
+
+                if (book is null)
                 {
                     _notyf.Error("Book not found");
-                    return new BaseResponse<bool> {IsSuccessful = false, Message = "Error finding Book" };
+                    return new BaseResponse<bool> { IsSuccessful = false, Message = "Error finding Book" };
                 }
 
                 var borrowing = new Borrowing()
                 {
-                    UserId = userIdAndName.userId,
+                    Id = Guid.NewGuid(),
+                    UserId = Guid.Parse(userIdAndName.userId),
                     BookId = book.Id,
-                    Book = book,
-                    User = user!,
-                    Status = Data.Enum.Status.pending
+                    Status = LendingStatus.pending
                 };
 
                 await _dbContext.AddAsync(borrowing);
 
-                var message = new Message
+
+                var role = await _dbContext.Roles
+                                .Where(x => x.Name == "Libarian")
+                                .FirstOrDefaultAsync();
+
+                if (role == null)
+                    return new BaseResponse<bool> { IsSuccessful = false, Message = "Libarian not found" };
+
+                var userRoles = await _dbContext.UserRoles
+                                .Where(x => x.RoleId == role.Id)
+                                .FirstOrDefaultAsync();
+
+                if (userRoles == null)
+                    return new BaseResponse<bool> { IsSuccessful = false, Message = "Libarian not found" };
+
+
+                var message = new LibraryNotification()
                 {
-                    BorrowId = borrowing.Id,
-                    Borrowing = borrowing,
-                    LibrarianMessageContent = $"{user!.FirstName} requested to borrow a copy of {book.Title} by {book.Author}.",
-                    UserMessageContent = $"You requested to borrow a copy of {book.Title} by {book.Author}.",
+                    Id = Guid.NewGuid(),
+                    CreatedOn = DateTime.Now,
+                    IsRead = false,
+                    Message = $"{user!.FirstName} requested to borrow a copy of {book.Title} by {book.Author}.",
+                    UserId = Guid.Parse(userRoles.UserId)
                 };
 
-                await _dbContext.AddAsync(message);
+                await _dbContext.LibarianMessages.AddAsync(message);
 
-                if(await _dbContext.SaveChangesAsync() > 0)
+                if (await _dbContext.SaveChangesAsync() > 0)
                 {
                     _notyf.Success("Request Submitted!");
-                    return new BaseResponse<bool> {IsSuccessful = true, Message = "Request Submitted"};
+                    return new BaseResponse<bool> { IsSuccessful = true, Message = "Request Submitted" };
                 }
 
                 _notyf.Error("Unable to submit request", 8);
-                return new BaseResponse<bool> {IsSuccessful = false, Message = "Request Failed"};
+                return new BaseResponse<bool> { IsSuccessful = false, Message = "Request Failed" };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _notyf.Error("Unable to Submit Request");
-                return new BaseResponse<bool> {IsSuccessful = true, Message = "Request Failed"}; 
+                return new BaseResponse<bool> { IsSuccessful = true, Message = "Request Failed" };
             }
-            
+
+        }
+
+
+        public async Task<BaseResponse<bool>> ApprovedBorrowBookRequest(Guid borrowingId, LendingStatus lendingStatus)
+        {
+            try
+            {
+
+                var borrowing = await _dbContext.Borrowings
+                                    .Where(x => x.Id == borrowingId)
+                                    .FirstOrDefaultAsync();
+
+                if (borrowing is null)
+                {
+                    _notyf.Error("Book not found");
+                    return new BaseResponse<bool> { IsSuccessful = false, Message = "Error finding Book" };
+                }
+
+                if(borrowing.Status == lendingStatus)
+                    return new BaseResponse<bool> { IsSuccessful = false, Message = $"Request has already been {lendingStatus.ToString()}" };
+
+
+                borrowing.Status = lendingStatus;
+                borrowing.UpdatedOn = DateTime.Now;
+                borrowing.DueDate = DateTime.Now.AddDays(7);
+
+                 _dbContext.Borrowings.Update(borrowing);
+
+                var message = new LibraryNotification()
+                {
+                    Id = Guid.NewGuid(),
+                    CreatedOn = DateTime.Now,
+                    IsRead = false,
+                    Message = $"Your request has been approved by the libarian you are to return the book on {borrowing.DueDate}",
+                    UserId = borrowing.UserId,
+                };
+
+                await _dbContext.LibarianMessages.AddAsync(message);
+
+                if (await _dbContext.SaveChangesAsync() > 0)
+                {
+                    _notyf.Success($"Request {lendingStatus.ToString()}!");
+                    return new BaseResponse<bool> { IsSuccessful = true, Message = "Request Submitted" };
+                }
+
+                _notyf.Error("Unable to submit request", 8);
+                return new BaseResponse<bool> { IsSuccessful = false, Message = "Request Failed" };
+            }
+            catch (Exception ex)
+            {
+                _notyf.Error("Unable to Submit Request");
+                return new BaseResponse<bool> { IsSuccessful = true, Message = "Request Failed" };
+            }
+
         }
     }
 }

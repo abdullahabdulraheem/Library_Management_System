@@ -13,7 +13,7 @@ public class LibraryDbContext : IdentityDbContext<User>
     }
 
     public DbSet<Book> Books { get; set; }
-    public DbSet<Message> LibarianMessages { get; set; }
+    public DbSet<LibraryNotification> LibarianMessages { get; set; }
     public DbSet<Borrowing> Borrowings { get; set; }
     public DbSet<User> Users { get; set; }
 
@@ -40,23 +40,13 @@ public class LibraryDbContext : IdentityDbContext<User>
            }
        );
 
-        modelBuilder.Entity<Message>(entity =>
+        modelBuilder.Entity<LibraryNotification>(entity =>
         {
             entity.HasKey(e => e.Id);
 
-            entity.HasOne(e => e.Borrowing)
-                .WithMany(b => b.LibarianMessages)
-                .HasForeignKey(e => e.BorrowId)
-                .OnDelete(DeleteBehavior.NoAction);
-
-            entity.HasOne(e => e.Receiver)
-                .WithMany(u => u.ReceivedMessages)
-                .HasForeignKey(e => e.ReceiverId)
-                .OnDelete(DeleteBehavior.NoAction);
-
-            entity.HasOne(e => e.Sender)
-                .WithMany(u => u.SentMessages)
-                .HasForeignKey(e => e.SenderId)
+            entity.HasOne(e => e.User)
+                .WithMany(b => b.Notifications)
+                .HasForeignKey(e => e.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
         });
     }

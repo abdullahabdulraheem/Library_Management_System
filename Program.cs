@@ -13,14 +13,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<LibraryDbContext>(
-   OptionsBuilder => OptionsBuilder.UseMySql(builder.Configuration.GetConnectionString("LMSConnectionString"), new MySqlServerVersion("8.0"))
-);
+//builder.Services.AddDbContext<LibraryDbContext>(
+//   OptionsBuilder => OptionsBuilder.UseMySql(builder.Configuration.GetConnectionString("LMSConnectionString"), new MySqlServerVersion("8.0"))
+//);
 
-// var connectionString = builder.Configuration.GetConnectionString("LMSConnectionString") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+var connectionString = builder.Configuration.GetConnectionString("LMSConnectionString") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
-// builder.Services.AddDbContext<LibraryDbContext>(options =>
-//     options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<LibraryDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddIdentity<User, IdentityRole>(opt => 
 {

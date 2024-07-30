@@ -1,4 +1,5 @@
-﻿using Library_Management_System.Dto;
+﻿using Library_Management_System.Data.Enum;
+using Library_Management_System.Dto;
 using Library_Management_System.Dto.Book;
 
 namespace Library_Management_System.Service.Interface
@@ -11,5 +12,6 @@ namespace Library_Management_System.Service.Interface
         Task<BaseResponse<bool>> UpdateBook(Guid Id, UpdateBookRequestDto request);
         Task<BaseResponse<bool>> DeleteBook(Guid Id);
         Task<BaseResponse<bool>> BorrowBookRequest(Guid BookId);
+        Task<BaseResponse<bool>> ApprovedBorrowBookRequest(Guid borrowingId, LendingStatus lendingStatus);
     }
 }

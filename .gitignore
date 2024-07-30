@@ -487,3 +487,4 @@ $RECYCLE.BIN/
 bin/
 obj/
 
+/obj/Debug/net8.0/Library_Management_System.AssemblyInfo.cs

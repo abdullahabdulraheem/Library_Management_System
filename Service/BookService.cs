@@ -218,7 +218,7 @@ namespace Library_Management_System.Service
                 var borrowing = new Borrowing()
                 {
                     Id = Guid.NewGuid(),
-                    UserId = Guid.Parse(userIdAndName.userId),
+                    UserId = userIdAndName.userId,
                     BookId = book.Id,
                     Status = LendingStatus.pending
                 };
@@ -247,7 +247,7 @@ namespace Library_Management_System.Service
                     CreatedOn = DateTime.Now,
                     IsRead = false,
                     Message = $"{user!.FirstName} requested to borrow a copy of {book.Title} by {book.Author}.",
-                    UserId = Guid.Parse(userRoles.UserId)
+                    UserId = userRoles.UserId
                 };
 
                 await _dbContext.LibarianMessages.AddAsync(message);

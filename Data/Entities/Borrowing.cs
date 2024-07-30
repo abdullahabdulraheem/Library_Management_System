@@ -4,7 +4,7 @@ namespace Library_Management_System.Data.Entities;
 
 public class Borrowing : BaseEntity
 {
-    public Guid UserId { get; set; }
+    public string UserId { get; set; }
     public Guid BookId { get; set; } = default!;
     public DateTime BorrowDate { get; set; }
     public DateTime? DueDate { get; set; }

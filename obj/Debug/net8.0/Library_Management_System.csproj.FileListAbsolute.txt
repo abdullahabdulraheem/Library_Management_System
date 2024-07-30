@@ -294,12 +294,7 @@ C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Library_M
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Library_Management_System.pdb
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.Views.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Google.Protobuf.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Humanizer.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\K4os.Compression.LZ4.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\K4os.Hash.xxHash.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -318,11 +313,7 @@ C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Microsoft
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Mono.TextTemplating.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\MySql.Data.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\MySql.EntityFrameworkCore.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\MySqlConnector.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\System.CodeDom.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -334,7 +325,6 @@ C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\System.Dr
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\System.Security.Permissions.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\System.Windows.Extensions.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\ZstdSharp.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -387,11 +377,6 @@ C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\ru\Micros
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
-C:\Project\MyStudentProject\Library_Management_System\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
 C:\Project\MyStudentProject\Library_Management_System\obj\Debug\net8.0\staticwebassets.build.json
 C:\Project\MyStudentProject\Library_Management_System\obj\Debug\net8.0\staticwebassets.development.json
 C:\Project\MyStudentProject\Library_Management_System\obj\Debug\net8.0\staticwebassets\msbuild.Library_Management_System.Microsoft.AspNetCore.StaticWebAssets.props

@@ -14,7 +14,7 @@ namespace Library_Management_System.Service.Interface
         Task<BaseResponse<bool>> BorrowBookRequest(Guid BookId, string userId);
         Task<BaseResponse<bool>> ApprovedBorrowBookRequest(Guid borrowingId, LendingStatus lendingStatus);
         Task<BaseResponse<List<LendingBookDto>>> GetLendingBooks();
-        Task<BaseResponse<List<List<LibraryNotificationDto>>>> GetNotificationByUserIdSlim(string userId);
+        Task<BaseResponse<List<LibraryNotificationDto>>> GetNotificationByUserIdSlim(string userId);
         Task<BaseResponse<List<LibraryNotificationDto>>> GetNotificationByUserId(string userId);
     }
 }

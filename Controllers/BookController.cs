@@ -147,5 +147,27 @@ namespace Library_Management_System.Controllers
 
             return RedirectToAction("BookRequests");
         }
+
+
+        [HttpGet("notifications")]
+        public async Task<IActionResult> Notifications()
+        {
+            var userName = User?.Identity?.Name;
+
+            var notifications = new List<LibraryNotificationDto>() { };
+
+            if (!string.IsNullOrEmpty(userName))
+            {
+                var loggedInUser = await _userManager.FindByNameAsync(userName);
+                if (loggedInUser != null)
+                {
+                    var result = await _bookService.GetNotificationByUserId(loggedInUser.Id);
+
+                    notifications = result.Data;
+                }
+
+            }
+            return View(notifications);
+        }
     }
 }

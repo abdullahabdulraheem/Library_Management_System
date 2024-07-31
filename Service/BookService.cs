@@ -248,6 +248,7 @@ namespace Library_Management_System.Service
                 {
                     Id = Guid.NewGuid(),
                     CreatedOn = DateTime.Now,
+                    Description = NotificationStatus.Request.ToString(),
                     IsRead = false,
                     Message = $"{user!.FirstName} requested to borrow a copy of {book.Title} by {book.Author}.",
                     UserId = userRoles.UserId
@@ -309,6 +310,7 @@ namespace Library_Management_System.Service
                 borrowing.Status = lendingStatus;
                 borrowing.UpdatedOn = DateTime.Now;
                 borrowing.DueDate = DateTime.Now.AddDays(7);
+                borrowing.BorrowDate = DateTime.Now;
 
                 _dbContext.Borrowings.Update(borrowing);
 
@@ -316,6 +318,7 @@ namespace Library_Management_System.Service
                 {
                     Id = Guid.NewGuid(),
                     CreatedOn = DateTime.Now,
+                    Description = NotificationStatus.Approval.ToString(),
                     IsRead = false,
                     Message = $"Your request has been approved by the libarian you are to return the book on {borrowing.DueDate}",
                     UserId = borrowing.UserId,
@@ -376,7 +379,6 @@ namespace Library_Management_System.Service
             }
         }
 
-
         public async Task<BaseResponse<List<LibraryNotificationDto>>> GetNotificationByUserIdSlim(string userId)
         {
 
@@ -390,8 +392,11 @@ namespace Library_Management_System.Service
                         UserId = x.UserId,
                         FullName = $"{x.User.FirstName} .{x.User.LastName[0]}.",
                         IsRead = x.IsRead,
-                        Message = x.Message
-                    }).Take(3).ToListAsync();
+                        Message = x.Message,
+                        CreatedDate = x.CreatedOn,
+                        Description = x.Description,
+                        Id = x.Id,
+                    }).Take(3).OrderByDescending(x => x.CreatedDate).ToListAsync();
 
                
 
@@ -405,8 +410,6 @@ namespace Library_Management_System.Service
             }
         }
 
-
-
         public async Task<BaseResponse<List<LibraryNotificationDto>>> GetNotificationByUserId(string userId)
         {
 
@@ -417,10 +420,12 @@ namespace Library_Management_System.Service
                     .Where(x => x.UserId == userId)
                     .Select(x => new LibraryNotificationDto
                     {
+                        Id = x.Id,
                         UserId = x.UserId,
                         FullName = $"{x.User.FirstName} .{x.User.LastName[0]}.",
                         IsRead = x.IsRead,
-                        Message = x.Message
+                        Message = x.Message,
+                        Description = x.Description,
                     }).ToListAsync();
 
 

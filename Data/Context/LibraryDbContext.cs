@@ -24,21 +24,21 @@ public class LibraryDbContext : IdentityDbContext<User>
         base.OnModelCreating(modelBuilder);
 
       
-        //Seeding Country Master Data using HasData method
-        modelBuilder.Entity<IdentityRole>().HasData(
-         new IdentityRole
-         {
-             Id = Guid.NewGuid().ToString(),
-             Name = "Libarian",
-             NormalizedName = "LIBARIAN"
-         },
-           new IdentityRole
-           {
-               Id = Guid.NewGuid().ToString(),
-               Name = "User",
-               NormalizedName = "USER"
-           }
-       );
+       // //Seeding Country Master Data using HasData method
+       // modelBuilder.Entity<IdentityRole>().HasData(
+       //  new IdentityRole
+       //  {
+       //      Id = Guid.NewGuid().ToString(),
+       //      Name = "Libarian",
+       //      NormalizedName = "LIBARIAN"
+       //  },
+       //    new IdentityRole
+       //    {
+       //        Id = Guid.NewGuid().ToString(),
+       //        Name = "User",
+       //        NormalizedName = "USER"
+       //    }
+       //);
 
         modelBuilder.Entity<LibraryNotification>(entity =>
         {

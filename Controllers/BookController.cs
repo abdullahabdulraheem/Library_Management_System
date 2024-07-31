@@ -1,4 +1,5 @@
 ﻿using Library_Management_System.Data.Entities;
+using Library_Management_System.Data.Enum;
 using Library_Management_System.Dto.Book;
 using Library_Management_System.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
@@ -131,6 +132,20 @@ namespace Library_Management_System.Controllers
             }
 
             return View(result.Data);
+        }
+
+
+        [HttpGet("book-request-approval/{bookRequestId}/{status}")]
+        public async Task<IActionResult> BookRequestApproval(Guid bookRequestId, LendingStatus status)
+        {
+            var result = await _bookService.ApprovedBorrowBookRequest(bookRequestId,status);
+
+            if (result.IsSuccessful)
+            {
+                return RedirectToAction("BookRequests");
+            }
+
+            return RedirectToAction("BookRequests");
         }
     }
 }

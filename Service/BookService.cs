@@ -289,7 +289,12 @@ namespace Library_Management_System.Service
                 }
 
                 if (borrowing.Status == lendingStatus)
+                {
+                    _notyf.Error($"Request has already been {lendingStatus.ToString()}");
+
                     return new BaseResponse<bool> { IsSuccessful = false, Message = $"Request has already been {lendingStatus.ToString()}" };
+                }
+
 
 
                 borrowing.Status = lendingStatus;

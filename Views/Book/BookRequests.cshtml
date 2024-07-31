@@ -29,7 +29,8 @@
                             <tr>
                                 <th> FullName </th>
                                 <th> Book Name </th>
-                                <th> Borrow Date </th>
+                                @* <th> Borrow Date </th> *@
+                                <th> Due Date </th>
                                 <th> Returned </th>
                                 <th> Status </th>
                                 <th> Action </th>
@@ -44,7 +45,8 @@
                                     <tr>
                                         <td>@item.FullName</td>
                                         <td>@item.BookName</td>
-                                        <td>@item.BorrowDate</td>
+                                       @*  <td>@item.BorrowDate</td> *@
+                                        <td>@item.DueDate</td>
                                         <td>@item.Returned</td>
                                         <td>
                                             @if (item.Status == Library_Management_System.Data.Enum.LendingStatus.Approved)
@@ -62,7 +64,7 @@
 
                                         </td>
                                         <td>
-                                            <a href="@Url.Action("BookRequestApproval",new {bookRequestId = item.Id, status=1})" class="btn btn-gradient-promary btn-icon-text btn-sm">
+                                            <a href="@Url.Action("BookRequestApproval",new {bookRequestId = item.Id, status=1})" class="btn btn-gradient-success btn-icon-text btn-sm">
                                                 Approve <i class="mdi mdi-file-check btn-icon-append"></i>
                                             </a>
                                             |

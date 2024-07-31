@@ -1,4 +1,6 @@
-﻿namespace Library_Management_System.Dto.Book
+﻿using Library_Management_System.Data;
+
+namespace Library_Management_System.Dto.Book
 {
     public class BookDto
     {

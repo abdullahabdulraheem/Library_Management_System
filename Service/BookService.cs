@@ -282,9 +282,18 @@ namespace Library_Management_System.Service
                                     .Where(x => x.Id == borrowingId)
                                     .FirstOrDefaultAsync();
 
-                if (borrowing is null)
+
+
+
+                if (borrowing == null)
                 {
                     _notyf.Error("Book not found");
+                    return new BaseResponse<bool> { IsSuccessful = false, Message = "Error finding Book" };
+                }
+
+                if (borrowing.Status == LendingStatus.Rejected)
+                {
+                    _notyf.Error($"Request has already been {LendingStatus.Rejected.ToString()}");
                     return new BaseResponse<bool> { IsSuccessful = false, Message = "Error finding Book" };
                 }
 
@@ -364,6 +373,65 @@ namespace Library_Management_System.Service
             catch (Exception ex)
             {
                 return new BaseResponse<List<LendingBookDto>> { IsSuccessful = false, Message = "Error : Updated Failed" };
+            }
+        }
+
+
+        public async Task<BaseResponse<List<LibraryNotificationDto>>> GetNotificationByUserIdSlim(string userId)
+        {
+
+            try
+            {
+                var notifications = await _dbContext.LibarianMessages
+                    .Include(x => x.User)
+                    .Where(x => x.UserId == userId)
+                    .Select(x => new LibraryNotificationDto
+                    {
+                        UserId = x.UserId,
+                        FullName = $"{x.User.FirstName} .{x.User.LastName[0]}.",
+                        IsRead = x.IsRead,
+                        Message = x.Message
+                    }).Take(3).ToListAsync();
+
+               
+
+                return new BaseResponse<List<LibraryNotificationDto>> { IsSuccessful = true, Message = "retieved succesful", Data = notifications };
+
+            }
+            catch (Exception ex)
+            {
+
+                return new BaseResponse<List<LibraryNotificationDto>> { IsSuccessful = false, Message = "Error : Updated Failed" };
+            }
+        }
+
+
+
+        public async Task<BaseResponse<List<LibraryNotificationDto>>> GetNotificationByUserId(string userId)
+        {
+
+            try
+            {
+                var notifications = await _dbContext.LibarianMessages
+                    .Include(x => x.User)
+                    .Where(x => x.UserId == userId)
+                    .Select(x => new LibraryNotificationDto
+                    {
+                        UserId = x.UserId,
+                        FullName = $"{x.User.FirstName} .{x.User.LastName[0]}.",
+                        IsRead = x.IsRead,
+                        Message = x.Message
+                    }).ToListAsync();
+
+
+
+                return new BaseResponse<List<LibraryNotificationDto>> { IsSuccessful = true, Message = "retieved succesful", Data = notifications };
+
+            }
+            catch (Exception ex)
+            {
+
+                return new BaseResponse<List<LibraryNotificationDto>> { IsSuccessful = false, Message = "Error : Updated Failed" };
             }
         }
     }

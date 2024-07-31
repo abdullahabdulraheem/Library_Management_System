@@ -1,6 +1,8 @@
-﻿using Library_Management_System.Dto.Book;
+﻿using Library_Management_System.Data.Entities;
+using Library_Management_System.Dto.Book;
 using Library_Management_System.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Library_Management_System.Controllers
@@ -10,10 +12,12 @@ namespace Library_Management_System.Controllers
     public class BookController : Controller
     {
         private readonly IBookService _bookService;
+        private readonly UserManager<User> _userManager;
 
-        public BookController(IBookService bookService)
+        public BookController(IBookService bookService, UserManager<User> userManager)
         {
             _bookService = bookService;
+            _userManager = userManager;
         }
 
         [HttpGet("create-book")]
@@ -54,7 +58,7 @@ namespace Library_Management_System.Controllers
 
             if (result.IsSuccessful)
             {
-              return  RedirectToAction("Books");
+                return RedirectToAction("Books");
             }
             return RedirectToAction("EditBook", new { id = id });
         }
@@ -101,17 +105,32 @@ namespace Library_Management_System.Controllers
             return RedirectToAction("Books");
         }
 
-        public async Task<IActionResult> BorrowBookRequest(Guid id)
+        public async Task<IActionResult> BorrowBookRequest(Guid bookId)
         {
-            var result = await _bookService.BorrowBookRequest(id);
+            var user = await _userManager.GetUserAsync(User);
 
-            if(result.IsSuccessful)
+            var result = await _bookService.BorrowBookRequest(bookId,user.Id);
+
+            if (result.IsSuccessful)
             {
                 return RedirectToAction("Books");
             }
 
             return RedirectToAction("Books");
         }
-        
+
+
+        [HttpGet("book-request")]
+        public async Task<IActionResult> BookRequests()
+        {
+            var result = await _bookService.GetLendingBooks();
+
+            if (result.IsSuccessful)
+            {
+                return View(result.Data);
+            }
+
+            return View(result.Data);
+        }
     }
 }

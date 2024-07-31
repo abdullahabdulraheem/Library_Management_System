@@ -488,3 +488,9 @@ bin/
 obj/
 
 /obj/Debug/net8.0/Library_Management_System.AssemblyInfo.cs
+/obj/Debug/net8.0/Library_Management_System.AssemblyInfoInputs.cache
+/obj/Debug/net8.0/Library_Management_System.csproj.CoreCompileInputs.cache
+/obj/Debug/net8.0/Library_Management_System.dll
+/obj/Debug/net8.0/Library_Management_System.GeneratedMSBuildEditorConfig.editorconfig
+/obj/Debug/net8.0/Library_Management_System.pdb
+/obj/Debug/net8.0/Library_Management_System.sourcelink.json

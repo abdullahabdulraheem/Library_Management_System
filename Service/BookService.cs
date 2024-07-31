@@ -199,15 +199,13 @@ namespace Library_Management_System.Service
             }
         }
 
-        public async Task<BaseResponse<bool>> BorrowBookRequest(Guid BookId)
+        public async Task<BaseResponse<bool>> BorrowBookRequest(Guid BookId, string userId)
         {
             try
             {
                 var book = await _dbContext.Books.Where(x => x.Id == BookId).FirstOrDefaultAsync();
 
-                var userIdAndName = await Helper.GetCurrentUserIdAsync(_httpContextAccessor, _userManager);
-
-                var user = await _dbContext.Users.Where(x => x.Id == userIdAndName.userId).FirstOrDefaultAsync();
+                var user = await _dbContext.Users.Where(x => x.Id == userId).FirstOrDefaultAsync();
 
                 if (book is null)
                 {
@@ -215,10 +213,15 @@ namespace Library_Management_System.Service
                     return new BaseResponse<bool> { IsSuccessful = false, Message = "Error finding Book" };
                 }
 
+                if (user == null)
+                {
+                    return new BaseResponse<bool> { IsSuccessful = false, Message = "User not found" };
+                }
+
                 var borrowing = new Borrowing()
                 {
                     Id = Guid.NewGuid(),
-                    UserId = userIdAndName.userId,
+                    UserId = user.Id,
                     BookId = book.Id,
                     Status = LendingStatus.pending
                 };
@@ -285,7 +288,7 @@ namespace Library_Management_System.Service
                     return new BaseResponse<bool> { IsSuccessful = false, Message = "Error finding Book" };
                 }
 
-                if(borrowing.Status == lendingStatus)
+                if (borrowing.Status == lendingStatus)
                     return new BaseResponse<bool> { IsSuccessful = false, Message = $"Request has already been {lendingStatus.ToString()}" };
 
 
@@ -293,7 +296,7 @@ namespace Library_Management_System.Service
                 borrowing.UpdatedOn = DateTime.Now;
                 borrowing.DueDate = DateTime.Now.AddDays(7);
 
-                 _dbContext.Borrowings.Update(borrowing);
+                _dbContext.Borrowings.Update(borrowing);
 
                 var message = new LibraryNotification()
                 {
@@ -321,6 +324,42 @@ namespace Library_Management_System.Service
                 return new BaseResponse<bool> { IsSuccessful = true, Message = "Request Failed" };
             }
 
+        }
+
+
+        public async Task<BaseResponse<List<LendingBookDto>>> GetLendingBooks()
+        {
+
+            try
+            {
+                var lendingBooks = await _dbContext.Borrowings
+                    .Include(x => x.Book)
+                    .Include(x => x.User)
+                    .Select(x => new LendingBookDto
+                    {
+                        Id = x.Id,
+                        BookId = x.BookId,
+                        BookName = x.Book.Title,
+                        DueDate = x.DueDate,
+                        BorrowDate = x.BorrowDate,
+                        FullName = $"{x.User.FirstName} {x.User.LastName}",
+                        Returned = x.Returned,
+                        Status = x.Status,
+                        UserId = x.UserId
+                    }).ToListAsync();
+
+                if (lendingBooks.Count > 0)
+                {
+                    return new BaseResponse<List<LendingBookDto>> { IsSuccessful = true, Message = "Retrived successfully", Data = lendingBooks };
+                }
+
+                return new BaseResponse<List<LendingBookDto>> { IsSuccessful = false, Message = "Updated Failed" };
+
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<List<LendingBookDto>> { IsSuccessful = false, Message = "Error : Updated Failed" };
+            }
         }
     }
 }

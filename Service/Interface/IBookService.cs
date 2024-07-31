@@ -11,7 +11,8 @@ namespace Library_Management_System.Service.Interface
         Task<BaseResponse<List<BookDto>>> GetBooks();
         Task<BaseResponse<bool>> UpdateBook(Guid Id, UpdateBookRequestDto request);
         Task<BaseResponse<bool>> DeleteBook(Guid Id);
-        Task<BaseResponse<bool>> BorrowBookRequest(Guid BookId);
+        Task<BaseResponse<bool>> BorrowBookRequest(Guid BookId, string userId);
         Task<BaseResponse<bool>> ApprovedBorrowBookRequest(Guid borrowingId, LendingStatus lendingStatus);
+        Task<BaseResponse<List<LendingBookDto>>> GetLendingBooks();
     }
 }

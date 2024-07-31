@@ -1,5 +1,4 @@
-﻿@using Library_Management_System.Dto.Book;
-@model BookDto;
+﻿@model Library_Management_System.Dto.Book.BookDto;
 
 @{
     ViewData["Title"] = "Book";
@@ -58,7 +57,7 @@
                 <a href="@Url.Action("Books")" type="button" class="btn btn-outline-success btn-icon-text">
                     <i class="mdi mdi-alert btn-icon-prepend">Back to list</i> 
                 </a>
-                <a href="" type="button" class="btn btn-outline-success btn-icon-text">
+                <a href="@Url.Action("BorrowBookRequest", new { bookId = Model.Id})" type="button" class="btn btn-outline-success btn-icon-text">
                     <i class="mdi mdi-alert btn-icon-prepend">Borrow</i> 
                 </a>
             </div>

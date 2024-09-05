@@ -1,0 +1,74 @@
+﻿@using Library_Management_System.Dto.User;
+@model IEnumerable<UserDto>;
+
+@{
+    ViewData["Title"] = "User";
+    ViewData["SubTitle"] = "users";
+}
+
+
+<div class="page-header">
+    <h3 class="page-title">@ViewData["Title"]</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["SubTitle"]</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@ViewData["Title"]</h4>
+                <a href="@Url.Action("CreateLibarian")" class="card-description"> Create Libarian </a>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> LastName </th>
+                                <th> FirstName </th>
+                                <th> Email </th>
+                                <th> PhoneNumber </th>
+                                <th> Address </th>
+                                <th> User Type </th>
+                                <th> Action </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.LastName</td>
+                                        <td>@item.FirstName </td>
+                                        <td>@item.Email</td>
+                                        <td>@item.PhoneNumber</td>
+                                        <td>@item.Address</td>
+                                        <td>@item.UserType.ToString()</td>
+                                        <td>
+                                            <a href="@Url.Action("UserDetail",new {id = item.Id})"
+                                               class="btn btn-gradient-dark btn-icon-text btn-sm">
+                                                View <i class="mdi mdi-file-check btn-icon-append"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="6" class="text-center"> No data found</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

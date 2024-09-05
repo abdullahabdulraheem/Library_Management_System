@@ -1,0 +1,84 @@
+﻿@using Library_Management_System.Dto.Book;
+@model IEnumerable<BookDto>;
+
+@{
+    ViewData["Title"] = "Book";
+    ViewData["SubTitle"] = "Books";
+}
+
+
+<div class="page-header">
+    <h3 class="page-title"> Book</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["SubTitle"]</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@ViewData["Title"]</h4>
+                <a href="@Url.Action("CreateBook")" class="card-description"> Create Book </a>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> Title </th>
+                                <th> Author </th>
+                                <th> ISBN </th>
+                                <th> Genre </th>
+                                <th> Copies </th>
+                                <th> Status </th>
+                                <th> Action </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td> @item.Title</td>
+                                        <td>@item.Author</td>
+                                        <td>@item.ISBN</td>
+                                        <td>@item.Genre</td>
+                                        <td>@item.Copies</td>
+                                        <td>
+                                            @if (item.Availability)
+                                            {
+                                                <label class="badge badge-gradient-success">Available</label>
+                                            }
+                                            else
+                                            {
+                                                <label class="badge badge-gradient-danger">Available</label>
+                                            }
+
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("BookDetail",new {id = item.Id})" class="btn btn-gradient-dark btn-icon-text btn-sm">
+                                                View <i class="mdi mdi-file-check btn-icon-append"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                               
+                                }
+                            }
+                            else
+                            {
+                            <tr>
+                                <td colspan="6" class="text-center"> No data found</td>
+                            </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

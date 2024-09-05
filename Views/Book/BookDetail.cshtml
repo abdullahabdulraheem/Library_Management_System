@@ -1,0 +1,66 @@
+﻿@model Library_Management_System.Dto.Book.BookDto;
+
+@{
+    ViewData["Title"] = "Book";
+    ViewData["SubTitle"] = "View Book Details";
+}
+
+
+<div class="page-header">
+    <h3 class="page-title"> Book</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["SubTitle"]</li>
+        </ol>
+    </nav>
+</div>
+
+
+
+<div class="col-md-9 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title"> <span>Title</span> : @Model.Title</h4>
+           @*  <p class="card-description"> Use <code>&lt;address&gt;</code> tag </p> *@
+            <div class="row">
+                <div class="col-md-6">
+                    <address class="text-primary">
+                        <p class="font-weight-bold"> Author </p>
+                        <p class="mb-2"> @Model.Author </p>
+                        <p class="font-weight-bold"> ISBN </p>
+                        <p> @Model.ISBN </p>
+                        <p class="font-weight-bold"> Genre </p>
+                        <p> @Model.Genre </p>
+                        <p class="font-weight-bold"> Copies </p>
+                        <p> @Model.Copies </p>
+                        <p class="font-weight-bold"> Status </p>
+                        @if (Model.Availability)
+                        {
+                            <p> Available </p>
+                        }else
+                        {
+                            <p> UnAvailable </p>
+                        }
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="template-demo mt-2">
+                <a href="@Url.Action("EditBook", new {id = Model.Id})" type="button" class="btn btn-outline-primary btn-icon-text">
+                    <i class="mdi mdi-file-check btn-icon-prepend"></i> Edit
+                </a>
+                <a href="@Url.Action("DeleteBook", new {id = Model.Id})" type="button" class="btn btn-outline-secondary btn-icon-text">
+                    Delete <i class="mdi mdi-file-check btn-icon-append"></i>
+                </a>
+                <a href="@Url.Action("Books")" type="button" class="btn btn-outline-success btn-icon-text">
+                    <i class="mdi mdi-alert btn-icon-prepend">Back to list</i> 
+                </a>
+                <a href="@Url.Action("BorrowBookRequest", new { bookId = Model.Id})" type="button" class="btn btn-outline-success btn-icon-text">
+                    <i class="mdi mdi-alert btn-icon-prepend">Borrow</i> 
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

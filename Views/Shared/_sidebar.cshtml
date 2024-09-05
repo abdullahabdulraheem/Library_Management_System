@@ -1,0 +1,75 @@
+﻿@using Library_Management_System.Data.Entities
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> _userManager
+@{
+    var user = await _userManager.GetUserAsync(User)!;
+}
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                    <img src="~/assets/images/profilepic.png" alt="profile" />
+                    <span class="login-status online"></span>
+                    <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2">@user!.FirstName @user.LastName[0].</span>
+                    <span class="text-secondary text-small mdi mdi-bookmark-check nav-profile-badge">@user.UserType.ToString()</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="@Url.Action("Index", "Home")">
+                <span class="menu-title">Home</span>
+                <i class="mdi mdi-home menu-icon"></i>
+            </a>
+        </li>
+
+        @* @if (User.IsInRole("Libarian"))
+        { *@
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                    <span class="menu-title">Book</span>
+                    <i class="menu-arrow"></i>
+                    <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Books","Book")">Books</a>
+                        </li>
+                        @* @if(User.IsInRole("Librarian"))
+                        { *@
+                            <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("BookRequests","Book")">Borrow</a>
+                        </li>
+                        @* } *@
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                    <span class="menu-title">Users</span>
+                    <i class="mdi mdi-contacts menu-icon"></i>
+                </a>
+                <div class="collapse" id="icons">
+                    <ul class="nav flex-column sub-menu">
+                        @* @if(User.IsInRole("Librarian"))
+                        { *@
+                            <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Users","Auth")">Users</a>
+                        </li>
+                        @* } *@
+                    </ul>
+                </div>
+            </li>
+        @* }
+        else
+        {
+            
+        } *@
+    </ul>
+</nav>

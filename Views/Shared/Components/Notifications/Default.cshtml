@@ -1,0 +1,27 @@
+﻿@using Library_Management_System.Dto.Book;
+@model IEnumerable<LibraryNotificationDto>;
+
+<div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+    <h6 class="p-3 mb-0">Notifications</h6>
+    <div class="dropdown-divider"></div>
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                        <i class="mdi mdi-cog"></i>
+                    </div>
+                </div>
+                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
+                    <p class="text-gray ellipsis mb-0"> @item.Message </p>
+                </div>
+            </a>
+            <div class="dropdown-divider"></div>
+        }
+    }
+    <a href="@Url.Action("Notifications")" class="p-3 mb-0 text-center">See all notifications</a>
+</div>

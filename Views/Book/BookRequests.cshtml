@@ -1,0 +1,92 @@
+﻿@using Library_Management_System.Dto.Book;
+@model IEnumerable<LendingBookDto>;
+
+@{
+    ViewData["Title"] = "Book Lending";
+    ViewData["SubTitle"] = "Lending Books";
+}
+
+
+<div class="page-header">
+    <h3 class="page-title"> Lending Book</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["SubTitle"]</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                @* <h4 class="card-title">@ViewData["Title"]</h4>
+                <a href="@Url.Action("CreateBook")" class="card-description"> Create Book </a> *@
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> FullName </th>
+                                <th> Book Name </th>
+                                @* <th> Borrow Date </th> *@
+                                <th> Due Date </th>
+                                <th> Returned </th>
+                                <th> Status </th>
+                                <th> Action </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.FullName</td>
+                                        <td>@item.BookName</td>
+                                       @*  <td>@item.BorrowDate</td> *@
+                                        <td>@item.DueDate</td>
+                                        <td>@item.Returned</td>
+                                        <td>
+                                            @if (item.Status == Library_Management_System.Data.Enum.LendingStatus.Approved)
+                                            {
+                                                <label class="badge badge-gradient-success">Approved</label>
+                                            }
+                                            else if (item.Status == Library_Management_System.Data.Enum.LendingStatus.Rejected)
+                                            {
+                                                <label class="badge badge-gradient-primary">Rejected</label>
+                                            }
+                                            else
+                                            {
+                                                <label class="badge badge-gradient-danger">Pending</label>
+                                            }
+
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("BookRequestApproval",new {bookRequestId = item.Id, status=1})" class="btn btn-gradient-success btn-icon-text btn-sm">
+                                                Approve <i class="mdi mdi-file-check btn-icon-append"></i>
+                                            </a>
+                                            |
+                                            <a href="@Url.Action("BookRequestApproval",new {bookRequestId = item.Id, status=2})" class="btn btn-gradient-danger btn-icon-text btn-sm">
+                                                Reject <i class="mdi mdi-file-check btn-icon-append"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="6" class="text-center"> No data found</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
